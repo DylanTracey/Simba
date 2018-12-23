@@ -21,11 +21,11 @@ def generate_uuid(digit_length):
 class SimbaFood(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uuid = db.Column(db.String(BASE_UUID_LENGTH), unique=True, nullable=False)
-    food_1 = db.Column(db.String(64), default='Dry Food', unique=True, nullable=False)
+    food_1 = db.Column(db.String(64), default='Dry Food', nullable=False)
     food_1_calories = db.Column(db.Integer(), default=315)
-    food_2 = db.Column(db.String(64), default='High Calorie Dry Food', unique=True, nullable=False)
+    food_2 = db.Column(db.String(64), default='High Calorie Dry Food', nullable=False)
     food_2_calories = db.Column(db.Integer(), default=352)
-    food_3 = db.Column(db.String(64), default='Wet Food', unique=True, nullable=False)
+    food_3 = db.Column(db.String(64), default='Wet Food', nullable=False)
     food_3_calories = db.Column(db.Integer(), default=57)
 
     def __init__(self, uuid_length):
