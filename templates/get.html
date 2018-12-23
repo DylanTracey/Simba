@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SimbaFood</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="">Simba</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Food App</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Admin</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<br>
+
+<div class="container" >
+    <div class="card card-body bg-light" style="position: relative;">
+        <h3><em style="color:#D4AF37" class="total"><b>{{ total }}</b></em> is Simba's estimated daily calorific intake:</h3>
+        <br>
+            <form onsubmit="return calculateCalories();" class="my-form">
+
+            <ul>
+                <li><b>Simba is eating <input class="food1" style="border: none; display: inline; font-family: inherit; font-size: inherit; padding: 0; width: auto;" type="text" name="food1" value={{ food1 }}>g of <em style="color:#32CD32;">{{ user.food_1 }}</em> at <em style="color:#ff7069;">{{ user.food_1_calories }}</em> calories per 100g</b></li>
+            </ul>
+            <ul>
+                <li><b>Simba is eating <input class="food2" style="border: none; display: inline; font-family: inherit; font-size: inherit; padding: 0; width: auto;" type="text" name="food2" value={{ food2 }}>g of <em style="color:#32CD32;">{{ user.food_2 }}</em> at <em style="color:#ff7069;">{{ user.food_2_calories }}</em> calories per 100g</b></li>
+            </ul>
+            <ul>
+                <li><b>Simba is eating <input class="food3" style="border: none; display: inline; font-family: inherit; font-size: inherit; padding: 0; width: auto;" type="text" name="food3" value={{ food3 }}>g of <em style="color:#32CD32;">{{ user.food_3 }}</em> at <em style="color:#ff7069;">{{ user.food_3_calories }}</em> calories per 100g</b></li>
+            </ul>
+                <br>
+                <input type="submit" value="Recalculate">
+            </form>
+
+    </div>
+</div>
+    <script>
+        function calculateCalories() {
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
